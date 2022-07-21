@@ -10,7 +10,7 @@ public class ConnectionDAO {
         Connection conexao = null ; 
         try {
             //drive de conexao://endereço da maquina: numero da porta/nome da base de dados 
-            String url = "jdbc:mysql://localhost:3306/db_condominio?user=root&password=Hug0.D3.L3on"; 
+            String url = "jdbc:mysql://localhost:3306/db_condominio?user=root&password=******"; 
             conexao = DriverManager.getConnection(url); 
         
         } catch (SQLException sql) {
