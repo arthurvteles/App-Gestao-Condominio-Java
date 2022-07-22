@@ -1,0 +1,34 @@
+//DAO que verifica se o login feito pelo o usuario está cadastrado no nosso banco//
+
+package DAO;
+
+import java.sql.Connection ; 
+import java.sql.ResultSet; 
+import java.sql.SQLException ; 
+import java.sql.PreparedStatement ; 
+import DTO.login_usuarioDTO ; 
+
+public class adm_loginDAO {
+    
+    Connection conexao ; 
+    
+    public ResultSet autenticacao_adm(login_usuarioDTO adm){
+ 
+        conexao = new ConnectionDAO().conectaDB() ;
+        
+        try {       
+            String consulta = "Select * from tb_loginadms where CPF = ? and Senha = ?" ; 
+            
+            PreparedStatement pstmt = conexao.prepareStatement(consulta) ; 
+            pstmt.setString(1, adm.getCpf_adm());
+            pstmt.setString(2, adm.getSenha_adm());
+                    
+            ResultSet res_set = pstmt.executeQuery() ;
+            return res_set ;
+        } catch (SQLException erro) {
+            System.out.println("Problemas na conexao com o Mysql") ;
+            return null; 
+        }
+    }
+    
+}
