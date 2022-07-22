@@ -1,0 +1,34 @@
+/*DTO para fazermos o cadastro de usuarios, vamos usar tanto para administradores, tanto para moradores*/
+
+package DTO;
+
+
+public class login_usuarioDTO {
+    private String cpf_adm ; 
+    private String senha_adm; 
+    
+    public login_usuarioDTO(String cpf_adm, String senha_adm){
+        this.cpf_adm = cpf_adm ; 
+        this.senha_adm = senha_adm ; 
+    }
+
+    public String getCpf_adm() {
+        return cpf_adm;
+    }
+
+    
+    public void setCpf_adm(String cpf_adm) {
+        this.cpf_adm = cpf_adm;
+    }
+
+  
+    public String getSenha_adm() {
+        return senha_adm;
+    }
+
+
+    public void setSenha_adm(String senha_adm) {
+        this.senha_adm = senha_adm;
+    }
+    
+}
