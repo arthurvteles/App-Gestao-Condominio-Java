@@ -1,0 +1,78 @@
+package DTO;
+
+public class CondominioDTO {
+    private String nome_cond; 
+    private String cpf_administrador_cond ; 
+    private String bairro_cond ; 
+    private String rua_cond ; 
+    private String cidade_cond ; 
+    private String estado_cond ; 
+    
+    public CondominioDTO(String nome, String cpf, String bairro, String rua, String cidade, String estado){
+        this.nome_cond = nome;
+        this.cpf_administrador_cond = cpf; 
+        this.bairro_cond = bairro ; 
+        this.rua_cond = rua ;
+        this.cidade_cond = cidade;
+        this.estado_cond = estado ; 
+    }
+
+    
+    public String getNome_cond() {
+        return nome_cond;
+    }
+
+  
+    public void setNome_cond(String nome_cond) {
+        this.nome_cond = nome_cond;
+    }
+
+    
+    public String getCpf_administrador_cond() {
+        return cpf_administrador_cond;
+    }
+
+
+    public void setCpf_administrador_cond(String cpf_administrador_cond) {
+        this.cpf_administrador_cond = cpf_administrador_cond;
+    }
+
+    public String getBairro_cond() {
+        return bairro_cond;
+    }
+
+
+    public void setBairro_cond(String bairro_cond) {
+        this.bairro_cond = bairro_cond;
+    }
+
+    public String getRua_cond() {
+        return rua_cond;
+    }
+
+   
+    public void setRua_cond(String rua_cond) {
+        this.rua_cond = rua_cond;
+    }
+
+   
+    public String getCidade_cond() {
+        return cidade_cond;
+    }
+
+
+    public void setCidade_cond(String cidade_cond) {
+        this.cidade_cond = cidade_cond;
+    }
+
+    public String getEstado_cond() {
+        return estado_cond;
+    }
+
+
+    public void setEstado_cond(String estado_cond) {
+        this.estado_cond = estado_cond;
+    }
+    
+}
+    
