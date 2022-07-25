@@ -1,0 +1,40 @@
+package DAO;
+
+import DTO.CondominioDTO ; 
+
+import java.sql.Connection ; 
+import java.sql.ResultSet; 
+import java.sql.SQLException ; 
+import java.sql.PreparedStatement ; 
+
+
+
+public class CondominioDAO {
+    Connection conexao ; 
+    PreparedStatement pstm ; 
+    
+    //CADASTRO DE UM CONDOMINIO NO BANCO DE DADOS//
+    public void adicionar_condominio(CondominioDTO condominio){
+           
+        Connection conexao = null ; 
+        String sql = "INSERT INTO tb_condominio (nome_condominio, cpf_administrador, bairro_condominio, rua_condominio, cidade_condominio,estado_condominio) VALUES (?,?,?,?,?,?); ";
+        conexao = new ConnectionDAO().conectaDB() ;
+        
+        try{
+             pstm = conexao.prepareStatement(sql) ; 
+             pstm.setString(1, condominio.getNome_cond());
+             pstm.setString(2, condominio.getCpf_administrador_cond());
+             pstm.setString(3, condominio.getBairro_cond());
+             pstm.setString(4, condominio.getRua_cond());
+             pstm.setString(5, condominio.getCidade_cond());
+             pstm.setString(6, condominio.getEstado_cond());
+             
+             pstm.execute(); 
+             pstm.close(); 
+             
+        }catch(SQLException erro){
+            System.out.println("Erro ao conectar com o MYSQL") ; 
+        
+        }
+    }
+}
