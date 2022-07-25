@@ -1,0 +1,56 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package DTO;
+
+public class MoradorDTO {
+    private String cpf_morador ;
+    private String nome_morador; 
+    private String telefone_morador; 
+    private short unidade_morador ;
+    
+    public MoradorDTO(String cpf,String nome,String telefone,short unidade){
+        this.cpf_morador = cpf; 
+        this.nome_morador = nome ; 
+        this.telefone_morador = telefone ; 
+        this.unidade_morador = unidade ;
+    }
+
+    public String getCpf_morador() {
+        return cpf_morador;
+    }
+    
+    public void setCpf_morador(String cpf_morador) {
+        this.cpf_morador = cpf_morador;
+    }
+    
+    public String getNome_morador() {
+        return nome_morador;
+    }
+
+    
+    public void setNome_morador(String nome_morador) {
+        this.nome_morador = nome_morador;
+    }
+
+   
+    public String getTelefone_morador() {
+        return telefone_morador;
+    }
+
+   
+    public void setTelefone_morador(String telefone_morador) {
+        this.telefone_morador = telefone_morador;
+    }
+
+
+    public short getUnidade_morador() {
+        return unidade_morador;
+    }
+
+    public void setUnidade_morador(short unidade_morador) {
+        this.unidade_morador = unidade_morador;
+    }
+    
+}   
