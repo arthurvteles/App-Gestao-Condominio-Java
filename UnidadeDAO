@@ -1,0 +1,33 @@
+package DAO;
+import DAO.ConnectionDAO;
+
+import java.sql.Connection ; 
+import java.sql.ResultSet; 
+import java.sql.SQLException ; 
+import java.sql.PreparedStatement ; 
+
+import DTO.UnidadeDTO; 
+
+
+
+public class UnidadeDAO {
+    Connection conexao = null ; 
+    PreparedStatement pstm ; 
+    
+    public void adiciona_unidade(UnidadeDTO unidade){
+        String sql = "INSERT INTO tb_unidades (num_condominio) VALUE (?)" ;
+        
+        conexao =  new ConnectionDAO().conectaDB() ; 
+        
+        try{
+            pstm = conexao.prepareStatement(sql); 
+            pstm.setInt(1,unidade.getNumero_condominio());
+            
+            pstm.execute() ; 
+            pstm.close() ;
+            
+        }catch(SQLException erro){
+            System.out.println("Erro no banco de dados: " + erro );
+        }       
+    }
+}
