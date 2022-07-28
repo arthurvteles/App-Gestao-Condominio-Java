@@ -1,0 +1,19 @@
+package DTO;
+
+
+public class UnidadeDTO {
+    private int numero_condominio; 
+    
+    public UnidadeDTO(int numero_condominio){
+        this.numero_condominio = numero_condominio ; 
+    }
+
+    public int getNumero_condominio() {
+        return numero_condominio;
+    }
+    public void setNumero_condominio(int numero_condominio) {
+        this.numero_condominio = numero_condominio;
+    }
+    
+
+}
